@@ -1,2 +1,28 @@
-# TESTES-DE-NIVELAMENTO
-Teste para conhecimento.
+Olá, me chamo Eduardo, sou responsável pelo desenvolvimento deste arquivo.
+Primeiramente, gostaria de agradecer pela oportunidade cedida a mim por este teste!
+
+Então, partindo para as questões do desenvolvimento: O projeto se inicia na criação do webscraper, para este desafio, eu criei as funções de compact_manager, download_manager, link_extractor, select_folder e o scrapper.
+O compact_manager é responsável por compactar arquivos, sendo possível adicionar arquivos extras à pasta após a compactação, ele realiza a compactação em formato ZIP.
+Partindo para o download_manager, essa função realiza a nomeação e alocação do arquivo para a pasta escolhida, utilizando o nome "anexo" e incrementando em 1 se não existir um arquivo anterior com o mesmo nome.
+Em seguida, o link_extractor realiza a identificação de links encontrados na página e carrega a URL da página de verificação e retorna para a main se há ou não links.
+Enquanto o scrapper faz buscas das tags <a> da web vinculadas, ele as busca e identifica se possuem o termo "anexo" como link, retornando se houve ou não resultados. Se houver, ele retorna os links para o download_manager, que vai utilizá-los como parâmetro de download.
+O select_folder é apenas uma função de seleção de pasta, tornando mais prático a execução do código e o arquivamento dos dados e a execução da main.
+Por fim, temos a main, que recebe essas funções e exibe prints para mostrar o andamento do processo, através destas funções, ele retorna os sucessos e os erros ou cancelamentos que podem ocorrer na operação.
+
+Partindo para a segunda etapa do desafio com SQL, eu utilizei o MySQL para realizar esta tarefa. Para começar, foi feito o download dos arquivos dos diretórios e alocados em uma pasta específica. Em seguida, foi realizada a criação do banco de dados com as tabelas e materiais de apoio fornecidos, as tabelas foram criadas a princípio com as instruções, porém houve alguns erros durante o processo e tive que alterar alguns limites dos campos ou seus tipos para que pudesse prosseguir. Após as tabelas serem criadas, foi feita a execução das queries de importação, no início, tentei fazer de uma forma simples, mas depois tentei automatizar através de uma "Procedure", porém sem sucesso, pois não era permitido no "mysql_8.0^". A solução foi usar os meios "simples" de importação sem automação.
+Por fim, realizei as queries analíticas com consultas no banco importado, verificando as operadoras com maiores despesas no último trimestre e as operadoras com maior despesa no último ano, para essa busca, eu acredito que a modalidade se referia à operadora e me baseei nisso para buscar e concluir esta etapa. Eu tive uma certa estranheza com MySQL, pois na faculdade só havia utilizado SQL Server para criar scripts, e na importação o programa estava bloqueado, a menos que eu removesse uma configuração de segurança. Mas, fora isso, foi um desafio prático de completar.
+
+Por fim, o último desafio que exigia a criação de uma API com interface web. Para realizar essa tarefa, eu criei um servidor em Python e instalei as dependências necessárias para executá-lo, resolvi alguns erros que apareceram no código e testei a execução para verificar seu funcionamento. Após estar tudo funcionando, criei a interface web: primeiro, instalei o Vue.js e suas dependências e, em seguida, configurei todo o código de frontend, após concluir essas etapas, testei o funcionamento da interface. Por sorte, funcionou, mas com um pequeno erro, que corrigi. Parti então para o Postman para criar e salvar as requisições. Minha mente, nesse momento, "bugou", e tentei fazer a requisição na web sem ter o Postman instalado, sem perceber. Então, fazer uma requisição na web para um serviço local não funciona corretamente, mas, por fim, concluí as requisições, testei e salvei para demonstrar os resultados.
+
+E isso foi tudo. Muito obrigado por sua atenção!
+
+
+Instruções para utilização dos códigos.
+
+Obs: Alguns dos programas utilizam caminhos dos dados locais de onde se encontram os diretórios do projeto. Infelizmente, não consegui encontrar uma lógica para utilizar variáveis globais ou algum método que facilitasse o acesso de forma automática. Esse problema pode aparecer na pasta api_server, no arquivo server.py, e nas importações do SQL.
+
+Para utilizar o webscraper, você deve abrir o terminal na pasta src do TESTES-DE-NIVELAMENTO. Primeiro, acesse a pasta do projeto utilizando o comando cd TESTES-DE-NIVELAMENTO, depois entre na pasta src com cd src. Em seguida, execute o comando python main.py. Se tudo estiver correto, o programa pedirá para selecionar o diretório onde deseja armazenar os anexos e realizar a compactação.
+
+Para utilizar o SQL, você deve abrir o arquivo chamado create_tables e executá-lo. Em seguida, nas importações, é necessário alterar a localização dos arquivos para corresponder ao caminho correto na sua máquina e, depois, executar o código. Por fim, para realizar as consultas analíticas, basta abrir os arquivos correspondentes e executá-las uma por uma.
+
+Para finalizar, a API deve ser aberta utilizando dois terminais. No primeiro terminal, dentro da pasta do projeto, acesse a pasta frontend_api utilizando o comando cd frontend_api e, em seguida, inicie a interface web com npm run serve. Após isso, abra outro terminal, acesse a pasta api_server com cd api_server e execute python server.py para iniciar o servidor. Se tudo estiver correto, você poderá acessar o localhost da sua máquina e executar as consultas disponíveis.
