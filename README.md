@@ -1,4 +1,4 @@
-# Teste de Nivelamento
+# Teste de Nivelamento - Parte 1
 Olá, me chamo Eduardo, sou responsável pelo desenvolvimento deste arquivo.
 Primeiramente, gostaria de agradecer pela oportunidade cedida a mim por este teste!
 
@@ -86,5 +86,9 @@ Copie e cole ou abra os arquivos no MySQL Workbench e execute.
 
 ## OBS
 **Obs 1:** Alguns dos programas utilizam caminhos dos dados locais de onde se encontram os diretórios do projeto. Infelizmente, não consegui encontrar uma lógica para utilizar variáveis globais ou algum método que facilitasse o acesso de forma automática. Esse problema pode aparecer na pasta api_server, no arquivo server.py, e nas importações do SQL.
+
+**Obs 2:** Para modularizar o teste foi feito dois repositórios diferentes.
+
+**Obs 3:** O repositório 1 se encontra: [Teste parte 2](https://github.com/EduardoTrikk/TESTES-DE-NIVELAMENTO-API/tree/master)
 
 ✨ Muito obrigado por sua atenção!
