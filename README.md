@@ -54,6 +54,21 @@ cd TESTES-DE-NIVELAMENTO
 ```
 Abra com seu editor de código (ex: Visual Studio Code)
 
+### Faça o ambiente virtual
+```bash
+python3.12 -m venv .venv
+```
+Ative
+```bash
+.venv/Scripts/activate #Windows
+source .venv/bin/activate #Linux
+```
+Instale 
+```bash
+pip install -r requirements.txt
+```
+
+
 ## 2 - TESTE DE WEB SCRAPING E TESTE DE TRANSFORMAÇÃO DE DADOS
 
 Dentro do seu editor de código, no terminal faça:
